@@ -9,4 +9,21 @@ class Dice:
         self.sides = totalSides
 
     def roll(self):
-        return random.randint(1, self.sides);
+        return random.randint(1, self.sides)
+
+    def rollAndAdd(self, times):
+        temp = 0
+
+        for i in range(times):
+            temp = temp + self.roll()
+
+        return temp
+
+    def rollAndAverage(self, times):
+        temp = 0
+
+        for i in range(times):
+            temp = temp + self.roll()
+
+        return temp / times
+
